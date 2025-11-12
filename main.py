@@ -7,3 +7,8 @@ app = FastAPI()
 app.include_router(restaurant_routes)
 app.include_router(itens_routes)
 
+@app.get("/")
+def rota_inicial():
+    return { 
+        "message": "Olá mundo" 
+    }
